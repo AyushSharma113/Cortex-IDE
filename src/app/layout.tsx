@@ -10,6 +10,7 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs';import {dark} from "@clerk/themes";
+import { ConvexClientProvider } from "@/components/convex-client-provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -47,6 +48,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
           >
+            <ConvexClientProvider>
             <header>
             <SignedOut> 
               <SignInButton />
@@ -61,6 +63,7 @@ export default function RootLayout({
               </SignedIn>
             </header>
           {children}
+          </ConvexClientProvider>
         </ThemeProvider>
       </body>
     </html>
