@@ -1,36 +1,194 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cortex IDE
 
-## Getting Started
+An AI-powered code editor built to bring chat, code assistance, and developer workflows into one place. This project is inspired by Cursor and focuses on creating a smoother coding experience with integrated AI features such as contextual chat, code generation, editing assistance, and project-aware responses.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+* **AI Chat Assistant** — Ask questions about your codebase, architecture, bugs, or implementation ideas.
+* **Code Generation** — Generate components, functions, boilerplate, and utility code directly from prompts.
+* **Code Editing Assistance** — Refactor, improve, explain, and fix code with AI help.
+* **Context-Aware Responses** — Designed to work with project context instead of isolated prompts.
+* **Modern Editor Experience** — Clean developer-focused UI inspired by AI-native code editors.
+* **Developer Workflow Focused** — Built for faster iteration, debugging, and learning.
+
+---
+
+## 🚀 Tech Stack
+
+> Update this section with your exact stack if needed.
+
+### Frontend
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+
+### Backend / AI
+
+* Node.js / API routes
+* AI model integration (OpenAI / Anthropic / OpenRouter / other provider)
+* Project context / prompt handling logic
+
+### Optional Additions
+
+* Monaco Editor / CodeMirror
+* File system integration
+* Authentication
+* GitHub integration
+* Multi-model support
+
+---
+
+## 📸 Preview
+
+Add screenshots or demo GIFs here.
+
+```md
+![App Screenshot](./public/screenshot.png)
+```
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/cursor-clone.git
+cd cursor-clone
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+or
+
+```bash
+pnpm install
+```
+
+### 3. Create environment variables
+
+Create a `.env.local` file in the root directory and add the required environment variables:
+
+```env
+OPENAI_API_KEY=your_api_key_here
+# or
+ANTHROPIC_API_KEY=your_api_key_here
+# or
+OPENROUTER_API_KEY=your_api_key_here
+```
+
+Add any other environment variables your project needs.
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Now open `http://localhost:3000` in your browser.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cursor-clone/
+├── app/                  # Next.js app router pages / routes
+├── components/           # Reusable UI components
+├── features/             # Feature-specific modules
+├── lib/                  # Utilities, helpers, configs
+├── public/               # Static assets
+├── styles/               # Global styles
+├── api/                  # API handlers / server logic
+└── README.md
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> Adjust this structure based on your actual project.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧠 How It Works
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The core idea of this project is to combine an editor-like interface with an AI assistant that can understand and help with development tasks.
+
+Typical workflow:
+
+1. User enters a prompt or asks a coding question.
+2. The app sends the request to the configured AI provider.
+3. Relevant project context, code snippets, or editor content can be attached to the prompt.
+4. The model returns a response such as:
+
+   * code generation
+   * explanation
+   * bug fixing suggestions
+   * refactoring help
+5. The response is displayed inside the app for further editing or execution.
+
+---
+
+## 🎯 Use Cases
+
+* Generate React/Next.js components faster
+* Debug errors with AI assistance
+* Refactor messy code
+* Understand unfamiliar codebases
+* Draft boilerplate for new features
+* Learn by asking code-related questions directly inside the editor workflow
+
+---
+
+## 🔮 Future Improvements
+
+* File tree and workspace support
+* Full project indexing / retrieval
+* Inline code edits
+* Diff view for AI-generated changes
+* GitHub PR review integration
+* Multi-tab editor support
+* Terminal integration
+* Model switching
+* Conversation history / memory
+* Authentication and cloud sync
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and feedback are welcome.
+
+If you’d like to contribute:
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Commit your work
+5. Open a pull request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+Feel free to use, modify, and build on top of it.
+
+---
+
+## 🙌 Acknowledgements
+
+Inspired by the idea of AI-native coding tools and modern developer workflows.
+
+If you found this project interesting, consider giving it a star ⭐
